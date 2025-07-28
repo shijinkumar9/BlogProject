@@ -20,7 +20,7 @@ const Blog = () => {
 
   const fetchBlogData = async()=>{
     try{
-      const {data}= await axios.get(`api/blog/${id}`)
+      const {data}= await axios.get(`/api/blog/${id}`)
       data.success ? setData(data.blog) : toast.error(data.message)
     }catch(e){
       toast.error(data.message)
