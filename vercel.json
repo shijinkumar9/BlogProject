@@ -1,3 +1,4 @@
+// BLOGPROJECT/vercel.json
 {
   "version": 2,
   "builds": [
@@ -13,20 +14,14 @@
       }
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/Server/api/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/Client/dist/$1"
-    }
-  ],
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination **destination**: "/Server/api/index.js"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/Client/dist/index.html"
+      "destination": "/index.html"
     }
   ]
 }
