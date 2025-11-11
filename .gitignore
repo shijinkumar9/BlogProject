@@ -6,3 +6,4 @@
 
 # Optional: environment variables
 **/.env
+.vercel

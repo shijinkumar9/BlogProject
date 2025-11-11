@@ -16,6 +16,12 @@ services:
       - "3000:3000"
     env_file:
       - ./Server/.env
+    environment:
+      - TRUST_PROXY=true
+      - DOCKER=true
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - CORS_ORIGINS=http://localhost:5173
     depends_on:
       - redis
     volumes:
