@@ -8,7 +8,9 @@
     {
       "src": "Client/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "config": {
+        "distDir": "dist"
+      }
     }
   ],
   "routes": [
@@ -19,6 +21,12 @@
     {
       "src": "/(.*)",
       "dest": "/Client/dist/$1"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/Client/dist/index.html"
     }
   ]
 }
